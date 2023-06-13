@@ -1,0 +1,12 @@
+.Dialog {
+    padding: 100px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonsContainer button {
+    margin-left: 10px;
+}
