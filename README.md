@@ -27,6 +27,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 ### `npm run test`
 
 Runs some tests about the api functionality.
+Please run first the 'npm run start' command to create the tables.
 
 ### `npm run dev`
 

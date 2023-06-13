@@ -50,7 +50,10 @@ developersRouter.put('/:id', async (req: Request, res: Response) => {
     try {
         const id: string = req.params.id;
         const developer: IDeveloperReq = req.body;
-
+        const isEmailValid: boolean = DevelopersService.isEmailValid(developer.email);
+        if (!isEmailValid) {
+            return res.status(400).send('Wrong email');
+        }
         const result = await DevelopersService.update(id, developer);
         if (result.length) {
             return res.status(200).send('Developer updated');
